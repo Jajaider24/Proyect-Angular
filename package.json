@@ -1,0 +1,14 @@
+{
+  "name": "delivery-frontend-support",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "mock:start": "json-server --watch src/mock-server/db.json --port 3333",
+    "mock:dev": "json-server --watch src/mock-server/db.json --port 3333 --routes src/mock-server/routes.json",
+    "lint": "echo 'Run Angular CLI lint in your real project'",
+    "postinstall": "echo 'Install frontend deps in your Angular project root.'"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}

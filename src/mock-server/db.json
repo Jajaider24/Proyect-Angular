@@ -1,0 +1,120 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "nombre": "La Hamburguesería",
+      "direccion": "Calle 1 # 10-10",
+      "telefono": "3000000000"
+    },
+    {
+      "id": 2,
+      "nombre": "Pizzería Central",
+      "direccion": "Avenida 2 # 20-20",
+      "telefono": "3000000001"
+    }
+  ],
+  "products": [
+    { "id": 1, "nombre": "Hamburguesa Clásica", "precio": 15000 },
+    { "id": 2, "nombre": "Pizza Mediana", "precio": 25000 },
+    { "id": 3, "nombre": "Gaseosa 500ml", "precio": 4000 }
+  ],
+  "menus": [
+    {
+      "id": 1,
+      "restauranteId": 1,
+      "productoId": 1,
+      "precioEspecial": 14000,
+      "disponible": true
+    },
+    { "id": 2, "restauranteId": 2, "productoId": 2, "disponible": true },
+    { "id": 3, "restauranteId": 1, "productoId": 3, "disponible": true }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "nombre": "Carlos Perez",
+      "email": "carlos@example.com",
+      "telefono": "3110000000"
+    }
+  ],
+  "addresses": [
+    {
+      "id": 1,
+      "pedidoId": 1,
+      "lat": 4.6482837,
+      "lng": -74.2478959,
+      "direccionCompleta": "Cll 26 # 52-10"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "clienteId": 1,
+      "items": [{ "productoId": 1, "cantidad": 2, "precioUnitario": 14000 }],
+      "direccionId": 1,
+      "estado": "PENDIENTE",
+      "motoId": null,
+      "conductorId": null,
+      "creadoEn": "2025-11-11T09:00:00Z"
+    }
+  ],
+  "motos": [{ "id": 1, "placa": "ABC123", "modelo": "Yamaha X" }],
+  "drivers": [
+    {
+      "id": 1,
+      "nombre": "Juancho",
+      "telefono": "3200000000",
+      "licencia": "B12345"
+    }
+  ],
+  "turnos": [
+    {
+      "id": 1,
+      "conductorId": 1,
+      "motoId": 1,
+      "inicio": "2025-11-11T07:00:00Z",
+      "fin": null
+    }
+  ],
+  "inconvenientes": [
+    {
+      "id": 1,
+      "motoId": 1,
+      "descripcion": "Pinchazo en la rueda trasera",
+      "fecha": "2025-11-11T08:30:00Z",
+      "fotos": [
+        {
+          "id": 1,
+          "inconvenienteId": 1,
+          "url": "https://example.com/photo1.jpg"
+        }
+      ]
+    }
+  ],
+  "charts": {
+    "pie": [
+      { "name": "Entregados", "value": 120 },
+      { "name": "Cancelados", "value": 10 },
+      { "name": "En Ruta", "value": 25 }
+    ],
+    "bar": [
+      { "name": "Lunes", "value": 30 },
+      { "name": "Martes", "value": 45 },
+      { "name": "Miércoles", "value": 50 }
+    ],
+    "timeseries": [
+      { "date": "2025-11-01", "value": 20 },
+      { "date": "2025-11-02", "value": 25 },
+      { "date": "2025-11-03", "value": 30 }
+    ]
+  },
+  "mapPositions": [
+    {
+      "motoId": 1,
+      "lat": 4.6482837,
+      "lng": -74.2478959,
+      "pedidoId": 1,
+      "timestamp": "2025-11-11T09:05:00Z"
+    }
+  ]
+}
